@@ -446,7 +446,7 @@ class TooltipView extends ComponentView {
     ) {
         const el = e.target;
         const tooltipModel = this._tooltipModel;
-
+        
         if (!tooltipModel) {
             return;
         }

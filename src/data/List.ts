@@ -1071,7 +1071,6 @@ class List<
         let minDiff = -1;
         let nearestIndicesLen = 0;
 
-
         // Check the test case of `test/ut/spec/data/List.js`.
         for (let i = 0, len = this.count(); i < len; i++) {
             const dataIndex = this.getRawIndex(i);
@@ -1084,8 +1083,8 @@ class List<
                 // So we chose the one that `diff >= 0` in this csae.
                 // But if `this.get(dim, i)` and `this.get(dim, j)` get the same value, both of them
                 // should be push to `nearestIndices`.
-                if (dist < minDist
-                    || (dist === minDist && diff >= 0 && minDiff < 0)
+                if (
+                    dist < minDist && diff >= 0 || (dist === minDist && diff >= 0 && minDiff < 0)
                 ) {
                     minDist = dist;
                     minDiff = diff;

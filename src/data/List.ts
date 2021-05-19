@@ -1084,7 +1084,7 @@ class List<
                 // But if `this.get(dim, i)` and `this.get(dim, j)` get the same value, both of them
                 // should be push to `nearestIndices`.
                 if (
-                    dist < minDist && diff >= 0 || (dist === minDist && diff >= 0 && minDiff < 0)
+                    diff >= 0 && (dist < minDist || (dist === minDist && minDiff < 0))
                 ) {
                     minDist = dist;
                     minDiff = diff;

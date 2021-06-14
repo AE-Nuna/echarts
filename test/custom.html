@@ -343,9 +343,14 @@ under the License.
 
                 var option = {
                     tooltip: {
+                        trigger: 'axis',
+                        formatter: (param) => console.log(param)
                     },
                     xAxis: {
-                        scale: true
+                        scale: true,
+                        axisPointer: {
+                            snap: false
+                        }
                     },
                     yAxis: {
                     },
